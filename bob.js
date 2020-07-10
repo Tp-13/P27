@@ -1,10 +1,10 @@
 class Bob{
     constructor(x, y, radius){
         var options = {
-            'restitution':0.3,
-            'friction':0.5,
-            'density':1.2,
-            'isStatic':true
+            'restitution':1,
+            'friction':0,
+            'density':0.8,
+            'isStatic':false
         }
         
         this.body = Bodies.circle(x, y, radius, options);
@@ -17,7 +17,7 @@ class Bob{
         var ang = this.body.angle;
         push();
         translate(pos.x, pos.y)
-        rotate(ang);
+        //rotate(ang);
         strokeWeight(3);
         stroke("white");
         fill("red");
